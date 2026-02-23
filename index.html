@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stone Cold F16 Al Shammary</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#000000" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero" aria-label="Site header">
+      <!-- Put your logo file in the same repo and rename it to logo.png (or use .svg) -->
+      <div class="logo-frame">
+        <img
+          class="logo"
+          src="logo.png"
+          alt="Arabic logo - keffiyeh skull gamer"
+          onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
+        />
+        <div id="logoFallback" class="logo-fallback" style="display:none;">
+          <span>ضع شعارك هنا</span>
+          <small>Upload <strong>logo.png</strong> (or <strong>logo.svg</strong>)</small>
+        </div>
+      </div>
+
+      <h1 class="title">STONE COLD <span class="accent">F16</span> AL SHAMMARY</h1>
+      <p class="subtitle">Informative landing page • GitHub Pages</p>
+
+      <div class="divider" role="presentation"></div>
+
+      <section class="card">
+        <h2 class="card-title">About</h2>
+        <p class="card-text">
+          This page is hosted on GitHub Pages. Replace the logo file and edit this text to match your info.
+        </p>
+
+        <div class="badge-row">
+          <span class="badge">BLACK</span>
+          <span class="badge">MINIMAL</span>
+          <span class="badge">STATIC</span>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="arabic" lang="ar" dir="rtl">ستون كولد F16 الشمري</p>
+        <p class="tiny">© <span id="year"></span> • All rights reserved</p>
+      </footer>
+    </header>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
