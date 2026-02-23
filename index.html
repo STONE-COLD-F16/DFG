@@ -1,56 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stone Cold F16 Al Shammary</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="theme-color" content="#000000" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK FORCE: PROFILE | GITHUB TACTICAL HUD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-  <main class="wrap">
-    <header class="hero" aria-label="Site header">
-      <!-- Put your logo file in the same repo and rename it to logo.png (or use .svg) -->
-      <div class="logo-frame">
-        <img
-          class="logo"
-          src="logo.png"
-          alt="Arabic logo - keffiyeh skull gamer"
-          onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
-        />
-        <div id="logoFallback" class="logo-fallback" style="display:none;">
-          <span>ضع شعارك هنا</span>
-          <small>Upload <strong>logo.png</strong> (or <strong>logo.svg</strong>)</small>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <!-- Tactical HUD Overlays -->
+    <div class="hud-layer">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <div class="compass-bar">
+            <span>285</span><span>300</span><span class="compass-north">N</span><span>030</span><span>045</span>
         </div>
-      </div>
 
-      <h1 class="title">STONE COLD <span class="accent">F16</span> AL SHAMMARY</h1>
-      <p class="subtitle">Informative landing page • GitHub Pages</p>
-
-      <div class="divider" role="presentation"></div>
-
-      <section class="card">
-        <h2 class="card-title">About</h2>
-        <p class="card-text">
-          This page is hosted on GitHub Pages. Replace the logo file and edit this text to match your info.
-        </p>
-
-        <div class="badge-row">
-          <span class="badge">BLACK</span>
-          <span class="badge">MINIMAL</span>
-          <span class="badge">STATIC</span>
+        <div class="side-bar side-left">
+            <div class="status-indicator">SYSTEM: ACTIVE</div>
+            <div class="status-indicator blinking">STABILIZER: 98%</div>
+            <div class="vertical-nodes">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+            </div>
         </div>
-      </section>
 
-      <footer class="footer">
-        <p class="arabic" lang="ar" dir="rtl">ستون كولد F16 الشمري</p>
-        <p class="tiny">© <span id="year"></span> • All rights reserved</p>
-      </footer>
-    </header>
-  </main>
+        <div class="side-bar side-right">
+            <div class="ammo-counter">REPOS: <span class="counter-val">42</span></div>
+            <div class="ammo-counter red">STREAK: <span class="counter-val">365</span></div>
+        </div>
+    </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <main class="content-container">
+        <header class="main-header">
+            <div class="glitch-wrapper">
+                <img src="logo.png" alt="Task Force Logo" class="profile-logo">
+                <h1 class="glitch" data-text="OPERATOR: GITHUB_USER">OPERATOR: GITHUB_USER</h1>
+            </div>
+            <p class="tagline">FULL-STACK SPECIALIST // CORE LOGISTICS</p>
+            <div class="header-actions">
+                <a href="https://discord.gg/7gJUrBgJBk" target="_blank" class="btn-discord">
+                    <span class="btn-text">JOIN US ON DISCORD</span>
+                    <span class="btn-glitch-layer"></span>
+                </a>
+            </div>
+        </header>
+
+        <section class="tactical-grid">
+            <div class="card card-stats">
+                <h2 class="card-title">MISSION STATS</h2>
+                <div class="stats-list">
+                    <div class="stat-item">
+                        <span class="stat-label">COMMITS</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 85%;"></div>
+                        </div>
+                        <span class="stat-value">2,840</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">PULL REQUESTS</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 60%;"></div>
+                        </div>
+                        <span class="stat-value">124</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">ISSUES RESOLVED</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 75%;"></div>
+                        </div>
+                        <span class="stat-value">512</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-repos">
+                <h2 class="card-title">GEAR / TOP REPOS</h2>
+                <div class="repo-list">
+                    <div class="repo-item neon-border">
+                        <div class="repo-header">
+                            <span class="repo-name">CORE-ENGINE-v3</span>
+                            <span class="repo-lang">TS</span>
+                        </div>
+                        <p class="repo-desc">Ultra-fast rendering engine for tactical simulations.</p>
+                    </div>
+                    <div class="repo-item">
+                        <div class="repo-header">
+                            <span class="repo-name">NEURAL-LINK-API</span>
+                            <span class="repo-lang">PY</span>
+                        </div>
+                        <p class="repo-desc">Secure interface for neural processing units.</p>
+                    </div>
+                    <div class="repo-item">
+                        <div class="repo-header">
+                            <span class="repo-name">HUD-FRAMEWORK</span>
+                            <span class="repo-lang">JS</span>
+                        </div>
+                        <p class="repo-desc">Lightweight system for dynamic HUD overlays.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="tactical-footer">
+            <div class="terminal-box">
+                <p>> BOOT_SEQ: SUCCESSFUL</p>
+                <p>> LOADING_USER_DATA... DONE</p>
+                <p>> ENCRYPTION_LEVEL: MAX</p>
+                <p class="typing">> WAITING FOR COMMAND<span class="cursor">_</span></p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Simple script for counter animation or randomness
+        document.querySelectorAll('.counter-val').forEach(counter => {
+            const finalVal = parseInt(counter.innerText);
+            let startVal = 0;
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                counter.innerText = Math.floor(progress * finalVal);
+                if (progress < 1) requestAnimationFrame(updateCounter);
+            }
+            requestAnimationFrame(updateCounter);
+        });
+    </script>
 </body>
+
 </html>
